@@ -1,8 +1,8 @@
 
-# What We’ll Build in This Step:
+# what i am building here:
 # An EC2 instance (aws_instance)
 # A security group (aws_security_group) that allows SSH (port 22) and maybe HTTP (port 80)
-# An SSH key pair (if not already created
+# An SSH key pair 
 
 resource "aws_key_pair" "default" {
   key_name   = "terraform-key"

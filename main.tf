@@ -1,4 +1,3 @@
-# main.tf - Start with terraform basics.
 
 terraform {
   required_version = ">=1.0.0"
@@ -10,14 +9,13 @@ terraform {
   }
 
   backend "local" {
-  } # we will use s3 backend later.
+  } # i will use s3 backend later.
 }
 
 provider "aws" {
   region = var.aws_region
 }
-# Use VPC Module in Root main.tf
-# Go back to the root folder and edit main.tf to call the module:
+
 module "vpc" {
   source              = "./modules/vpc"
   project_name        = var.project_name
@@ -26,7 +24,6 @@ module "vpc" {
   availability_zone   = var.availability_zone
 }
 
-# using ec2 module..
 module "ec2" {
   source           = "./modules/ec2"
   vpc_id           = module.vpc.vpc_id

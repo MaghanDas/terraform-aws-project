@@ -25,5 +25,5 @@ This project demonstrates using Terraform to provision an AWS infrastructure fro
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/yourusername/terraform-aws-project.git
+git clone https://github.com/MaghanDas/terraform-aws-project.git
 cd terraform-aws-project
